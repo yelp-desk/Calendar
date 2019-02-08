@@ -17,7 +17,10 @@
 
 ## Usage
 
-> Some usage instructions
+1. To seed the data, you must first create a creds.txt file in the root directory with this structure:
+  [client]
+  user=<yourUsername>
+  password=<yourPassword>
 
 ## Requirements
 
