@@ -17,10 +17,25 @@
 
 ## Usage
 
-1. To seed the data, you must first create a creds.txt file in the root directory with this structure:
+
+1. To run the seed script, you must create a creds.txt file in the root directory and a config.js file in the seeder directory.
+
+```sh
+# creds.txt
   [client]
   user=<yourUsername>
   password=<yourPassword>
+```
+
+```js
+// config.js
+  module.exports = {
+  host: 'localhost',
+  user: '<yourUsername>',
+  password: '<yourPassword>',
+  database: 'yelp'
+}
+```
 
 ## Requirements
 
