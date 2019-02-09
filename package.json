@@ -10,7 +10,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js --watch",
     "start": "nodemon server/index.js",
-    "seed": "mysql --defaults-extra-file=creds.txt < schema.sql && node seeder/seed.js"
+    "seed": "mysql --defaults-extra-file=creds.txt < schema.sql && node seed.js"
   },
   "dependencies": {
     "express": "^4.16.4",

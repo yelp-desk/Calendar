@@ -1,7 +1,4 @@
-const mysql = require('mysql');
-const mysqlConfig = require('./config.js');
-
-const connection = mysql.createConnection(mysqlConfig);
+const connection = require('./dbConnect.js');
 
 // SEED DATA INTO CAPACITY
 for (let i = 1; i <= 100; i++) {
