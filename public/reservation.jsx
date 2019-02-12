@@ -1,4 +1,6 @@
 import React from 'react';
+import ReservationTitle from './reservationTitle.jsx';
+import './styles/reservation.css';
 
 class Reservation extends React.Component {
   constructor(props) {
@@ -9,18 +11,8 @@ class Reservation extends React.Component {
 
   render () {
     return (
-      <div>
-        <div>
-          <h3>
-            <span>Icon</span>
-            <a>Make a Reservation</a>
-          </h3>
-        </div>
-
-        <div>
-          <select>
-          </select>
-        </div>
+      <div className="reservation-container">
+        <ReservationTitle />
       </div>
     )
   }

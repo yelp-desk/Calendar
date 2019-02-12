@@ -1,0 +1,6 @@
+.reservation-container {
+  border: 1px solid lightgrey;
+  margin: 5px;
+  border-radius: 3px;
+  height: 100px;
+}

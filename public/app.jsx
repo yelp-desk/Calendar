@@ -1,5 +1,6 @@
 import React from 'react';
-import Reservation from './reservation.js';
+import Reservation from './reservation.jsx';
+import './styles/app.css';
 
 class App extends React.Component {
   constructor (props) {
@@ -14,7 +15,9 @@ class App extends React.Component {
 
   render () {
     return (
-      <Reservation />
+      <div className="main-container">
+        <Reservation />
+      </div>
     )
   }
 }
