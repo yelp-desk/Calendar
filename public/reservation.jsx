@@ -1,5 +1,6 @@
 import React from 'react';
 import ReservationTitle from './reservationTitle.jsx';
+import CalendarInput from './calendarInput.jsx';
 import './styles/reservation.css';
 
 class Reservation extends React.Component {
@@ -12,8 +13,14 @@ class Reservation extends React.Component {
   render () {
     return (
       <div className="reservation-container">
-        <ReservationTitle />
+        <div>
+          <ReservationTitle />
+        </div>
+        <div>
+          <CalendarInput />
+        </div>
       </div>
+
     )
   }
 }
