@@ -4,7 +4,7 @@ const connection = require('../dbConnect');
 const app = express();
 const PORT = 3002;
 
-app.use(express.static(__dirname, + '../client'));
+app.use(express.static(__dirname + '/../client'));
 
 app.get('/api/avail/:rest_id', (req, res) => {
   connection.query(`SELECT * FROM availabilities WHERE rest_id = ${req.params.rest_id}`, (err, results, fields) => {

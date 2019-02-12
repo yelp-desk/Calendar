@@ -4,11 +4,17 @@ import ReactDOM from 'react-dom';
 class App extends React.Component {
   constructor (props) {
     super (props)
+    this.state = {
+    }
+  }
+
+  componentDidMount() {
+
   }
 
   render () {
     return (
-      <div>REACT WORKS HOMIE!!!</div>
+      <div>TESTERINO!</div>
     )
   }
 }
