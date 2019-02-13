@@ -24,10 +24,10 @@ var fakeTimeGen = function () {
   let close = Math.floor(Math.random() * 3) + 13;
   array.push({open: open, close: close});
 
-  openingHour = Math.floor(Math.random() * 4) + 15;
-  closingHour = Math.floor(Math.random() * 3) + 19;
+  open = Math.floor(Math.random() * 4) + 15;
+  close = Math.floor(Math.random() * 3) + 19;
   array.push({open: open, close: close});
-  
+
   return array;
 }
 
