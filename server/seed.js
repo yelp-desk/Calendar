@@ -12,42 +12,27 @@ var fakeTimeGen = function () {
 
   if (option) {
     // generate standard opening-close times
-    let openingHour = Math.floor(Math.random() * 4) + 8;
-    let openingMinute = 3 * Math.floor(Math.random() * 2);
-    let openingTime = `${openingHour}:${openingMinute}0:00`;
-
-    let closingHour = Math.floor(Math.random() * 4) + 19;
-    let closingMinute = 3 * Math.floor(Math.random() * 2);
-    let closingTime = `${closingHour}:${closingMinute}0:00`;
-    return [{open: openingTime, close: closingTime}];
+    let open = Math.floor(Math.random() * 4) + 8;
+    let close = Math.floor(Math.random() * 4) + 19;
+    return [{open: open, close: close}];
   }
 
   // generate times that close mid-day and re-open at night
   let array = [];
-  let openingHour = Math.floor(Math.random() * 4) + 8;
-  let openingMinute = 3 * Math.floor(Math.random() * 2);
-  let openingTime = `${openingHour}:${openingMinute}0:00`;
 
-  let closingHour = Math.floor(Math.random() * 3) + 13;
-  let closingMinute = 3 * Math.floor(Math.random() * 2);
-  let closingTime = `${closingHour}:${closingMinute}0:00`;
-
-  array.push({open: openingTime, close: closingTime});
+  let open = Math.floor(Math.random() * 4) + 8;
+  let close = Math.floor(Math.random() * 3) + 13;
+  array.push({open: open, close: close});
 
   openingHour = Math.floor(Math.random() * 4) + 15;
-  openingMinute = 3 * Math.floor(Math.random() * 2);
-  openingTime = `${openingHour}:${openingMinute}0:00`;
-
   closingHour = Math.floor(Math.random() * 3) + 19;
-  closingMinute = 3 * Math.floor(Math.random() * 2);
-  closingTime = `${closingHour}:${closingMinute}0:00`;
+  array.push({open: open, close: close});
   
-  array.push({open: openingTime, close: closingTime});
   return array;
 }
 
 for (let i = 1; i <= 100; i++) {
-  for (let j = 1; j <= 7; j++) {
+  for (let j = 0; j < 7; j++) {
     fakeTimeGen().forEach(availability => {
       let queryString = `INSERT INTO availabilities (open_time, close_time, day_of_week, rest_id) VALUES ('${availability.open}', '${availability.close}', ${j}, ${i})`;
       connection.query(queryString);
