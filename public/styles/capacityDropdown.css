@@ -1,0 +1,22 @@
+/* #capacity-container {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-direction: row;
+} */
+
+#capacity-dropdown {
+  /* Remove default */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background-image: url('../pictures/capacityBackground.png');
+  background-size: 100% 100%;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
+  padding: 7px 35px;
+  margin: 3px 10px 0 0;
+}

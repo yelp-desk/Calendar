@@ -1,2 +1,4 @@
 node_modules
 server/creds.txt
+client/images
+client/bundle.js

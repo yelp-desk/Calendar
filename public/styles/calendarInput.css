@@ -5,8 +5,8 @@
   justify-content: flex-start;
   flex-direction: row;
   border: 1px solid #CCCCCC;
-  border-radius: 2px;
-  margin: 0 10px;
+  border-radius: 3px;
+  margin: 0 10px 5px 10px;
 }
 
 #calendar-input {
@@ -25,4 +25,6 @@
 
 #dropdown-triangle {
   padding-right: 4px;
+  max-width: 60%;
+  max-height: 60%;
 }
