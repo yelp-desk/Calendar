@@ -2,6 +2,7 @@ import React from 'react';
 import ReservationTitle from './reservationTitle.jsx';
 import CalendarInput from './calendarInput.jsx';
 import ReservationInfo from './reservationInfo.jsx';
+import FindTable from './findTable.jsx';
 import './styles/reservation.css';
 
 class Reservation extends React.Component {
@@ -22,6 +23,9 @@ class Reservation extends React.Component {
         </div>
         <div>
           <ReservationInfo />
+        </div>
+        <div>
+          <FindTable />
         </div>
       </div>
 
