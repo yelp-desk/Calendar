@@ -1,3 +1,4 @@
 node_modules
-creds.txt
-seeder/config.js
+server/creds.txt
+client/images
+client/bundle.js

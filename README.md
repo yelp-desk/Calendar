@@ -18,23 +18,21 @@
 ## Usage
 
 
-1. To run the seed script, you must create a creds.txt file in the root directory and a config.js file in the seeder directory.
+1. To run the seed script, you must create a creds.txt file in the server directory reconfigure the config object in server/dbConnect to match your mySql credentials for user and password.
 
 ```sh
-# creds.txt
-  [client]
-  user=<yourUsername>
-  password=<yourPassword>
+# server/creds.txt
+[client]
+user=<yourUsername>
+password=<yourPassword>
 ```
 
 ```js
-// config.js
-  module.exports = {
-  host: 'localhost',
-  user: '<yourUsername>',
-  password: '<yourPassword>',
-  database: 'yelp'
-}
+// server/dbConnect.js config object
+host: 'localhost',
+user: '<yourUsername>',
+password: '<yourPassword>',
+database: 'yelp'
 ```
 
 ## Requirements
