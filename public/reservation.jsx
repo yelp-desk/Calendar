@@ -5,21 +5,39 @@ import Calendar from './calendar.jsx';
 import ReservationInfo from './reservationInfo.jsx';
 import FindTable from './findTable.jsx';
 import './styles/reservation.css';
+import moment from 'moment';
 
 class Reservation extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      showCalendar: false,
+      selectedDay: moment().day()
     }
+
+    this.showCalendar = this.showCalendar.bind(this);
+    this.onBlur = this.onBlur.bind(this);
+    this.selectDay = this.selectDay.bind(this);
   }
 
-  showCalendar () {
-    console.log(1);
-    document.getElementById('calendar').style.visibility="visible";
+  selectDay(day) {
+    this.setState({selectedDay: day})
   }
 
-  hideCalendar () {
-    document.getElementById('calendar').style.visibility="hidden";
+  showCalendar(event) {
+    event.stopPropagation();
+    this.setState({showCalendar: true}, () => {
+      document.getElementById('calendar').focus()
+    });
+    document.getElementById('input-container').style.borderColor = "#0A6BB6";
+    document.getElementById('input-container').style.boxShadow = "0 0 1px #0A6BB6";
+  }
+
+  onBlur(event) {
+    event.stopPropagation();
+    this.setState({showCalendar: false})
+    document.getElementById('input-container').style.borderColor = "#CCCCCC";
+    document.getElementById('input-container').style.boxShadow = "none";
   }
 
   render () {
@@ -28,12 +46,14 @@ class Reservation extends React.Component {
         <div>
           <ReservationTitle />
         </div>
-        <div id="calendar-container" tabIndex="0" onFocus={this.showCalendar} onBlur={this.hideCalendar}>
+        <div id="calendar-container" tabIndex="0" onClick={this.showCalendar}>
           <CalendarInput />
-          <Calendar />
+          {this.state.showCalendar && (
+              <Calendar selectDay={this.selectDay} onBlur={this.onBlur}/>
+            )}
         </div>
         <div>
-          <ReservationInfo />
+          <ReservationInfo selectedDay={this.state.selectedDay}/>
         </div>
         <div>
           <FindTable />

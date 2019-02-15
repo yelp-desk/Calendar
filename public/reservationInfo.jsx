@@ -11,7 +11,7 @@ class ReservationInfo extends React.Component {
   render () {
     return (
     <div id="reservation-info-container">
-      <AvailabilityDropdown />
+      <AvailabilityDropdown selectedDay={this.props.selectedDay}/>
       <CapacityDropdown />
     </div>
     )

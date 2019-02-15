@@ -7,6 +7,10 @@
   background-color:white;
 }
 
+#calendar:focus {
+  outline: none;
+}
+
 #calendar-head {
   display: flex;
   justify-content: space-between;

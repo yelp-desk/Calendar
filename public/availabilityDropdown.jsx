@@ -30,9 +30,7 @@ class AvailabilityDropdown extends React.Component {
   render () {
     // After get request for availabilities
     if (this.state.availabilities) {
-      let d = new Date;
-      let day = d.getDay().toString();
-      let availabilities = this.state.availabilities.filter(availability => availability.day_of_week === day);
+      let availabilities = this.state.availabilities.filter(availability => availability.day_of_week === this.props.selectedDay.toString());
   
       let timeArray = [];
       availabilities.forEach(availability => {

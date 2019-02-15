@@ -1,4 +1,4 @@
-.input-container {
+#input-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -8,7 +8,7 @@
   margin: 0 10px 5px 10px;
 }
 
-.input-container:hover {
+#input-container:hover {
   cursor: pointer;
 }
 

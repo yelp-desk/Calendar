@@ -15,12 +15,12 @@ class Calendar extends React.Component {
     let dateString = `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 
     return (
-      <div className="input-container">
+      <div id="input-container">
         <div>
           <img id="calendar-icon-small" src={calendarIconSmall}/>
         </div>
         <div>
-          <input id="calendar-input" type="text" disabled="true" value={dateString}/>
+          <input id="calendar-input" type="text" disabled="disabled" value={dateString}/>
         </div>
         <div>
           <img id="dropdown-triangle" src={dropdownTriangle}/>
