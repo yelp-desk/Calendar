@@ -10,7 +10,21 @@
   "scripts": {
     "build": "webpack --config webpack.config.js --watch",
     "start": "nodemon server/index.js",
-    "seed": "mysql --defaults-extra-file=server/creds.txt < server/schema.sql && node server/seed.js"
+    "seed": "mysql --defaults-extra-file=server/creds.txt < server/schema.sql && node server/seed.js",
+    "test": "jest --updateSnapshot || true",
+    "test:watch": "jest --watch --updateSnapshot || true",
+    "test:coverage": "jest --coverage --colors --updateSnapshot || true"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx$": "babel-jest",
+      "^.+\\.js$": "babel-jest",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransform.js"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   },
   "dependencies": {
     "express": "^4.16.4",
@@ -24,10 +38,15 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "file-loader": "^3.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.1.0",
     "jquery": "^3.3.1",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.3",

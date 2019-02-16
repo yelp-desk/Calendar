@@ -6,7 +6,7 @@ class CapacityDropdown extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      capacity: 5
+      capacity: null
     }
   }
 

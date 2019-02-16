@@ -56,7 +56,6 @@ class Calendar extends React.Component {
   }
 
   render () {
-    console.log(this.state.select);
     let rows = Math.ceil((this.state.startDay + this.state.daysInMonth)/7);
     return (
       <div id="calendar" tabIndex="-1" onBlur={this.props.onBlur}>
