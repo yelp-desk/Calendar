@@ -10,6 +10,17 @@
   background-size: 100% 100%;
   border: 1px solid #CCCCCC;
   border-radius: 3px;
-  padding: 5px 35px;
+  padding: 5px 34px;
   margin: 1px 10px 0 0;
+}
+
+#capacity-dropdown:hover {
+  cursor: pointer;
+}
+
+#capacity-dropdown:focus {
+  border: 1px solid #0A6BB6;
+  outline: none;
+  box-shadow: 0 0 1px #0A6BB6;
+
 }

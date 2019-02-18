@@ -1,5 +1,4 @@
-.input-container {
-  /* padding-left: 10px; */
+#input-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -9,12 +8,24 @@
   margin: 0 10px 5px 10px;
 }
 
+#input-container:hover {
+  cursor: pointer;
+}
+
 #calendar-input {
   border: 0;
   padding-left: 0px;
   width: 200px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+}
+
+#calendar-input:hover {
+  cursor: pointer;
+}
+
+#calendar-input:disabled {
+  color: black;
 }
 
 #calendar-icon-small {
