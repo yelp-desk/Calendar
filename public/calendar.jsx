@@ -1,8 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import './styles/calendar.css';
-import arrowLeft from './pictures/arrowLeft.png';
-import arrowRight from './pictures/arrowRight.png';
+// import arrowLeft from './pictures/arrowLeft.png';
+// import arrowRight from './pictures/arrowRight.png';
 
 class Calendar extends React.Component {
   constructor(props) {
@@ -56,16 +56,15 @@ class Calendar extends React.Component {
   }
 
   render () {
-    console.log(this.state.select);
     let rows = Math.ceil((this.state.startDay + this.state.daysInMonth)/7);
     return (
       <div id="calendar" tabIndex="-1" onBlur={this.props.onBlur}>
         <div id="calendar-head">
-          <img onClick={this.previousMonth} id="arrowLeft" src={arrowLeft}/>
+          <img onClick={this.previousMonth} id="arrowLeft" src="https://s3-us-west-1.amazonaws.com/yum-eats-calendar/arrowleft.png"/>
           <div>
             {this.state.calendarHead}
           </div>
-          <img onClick={this.nextMonth} id="arrowRight" src={arrowRight}/>
+          <img onClick={this.nextMonth} id="arrowRight" src="https://s3-us-west-1.amazonaws.com/yum-eats-calendar/arrowright.png"/>
         </div>
         <div className="col">
           <div className="row">
