@@ -11,6 +11,7 @@ app.get('/api/avail/:rest_id', (req, res) => {
     if (err) {
       res.status(400).send(err);
     } else {
+      res.setHeader('Access-Control-Allow-Origin', '*');
       res.status(200).send(results);
     }
   })
@@ -21,6 +22,7 @@ app.get('/api/capacity/:rest_id', (req, res) => {
     if (err) {
       res.status(400).send(err);
     } else {
+      res.setHeader('Access-Control-Allow-Origin', '*');
       res.status(200).send(results);
     }
   })

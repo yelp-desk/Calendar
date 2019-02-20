@@ -1,5 +1,5 @@
 import React from 'react';
-import calendarIcon from './pictures/calendarIcon.png';
+// import calendarIcon from './pictures/calendarIcon.png';
 import './styles/reservationTitle.css';
 
 class ReservationTitle extends React.Component {
@@ -13,7 +13,7 @@ class ReservationTitle extends React.Component {
     return (
       <div className="title-container">
         <div>
-          <img id="calendar-icon" src={calendarIcon}/>
+          <img id="calendar-icon" src="https://s3-us-west-1.amazonaws.com/yum-eats-calendar/calendarIcon.png"/>
         </div>
         <div>
           <a id="title">Make a Reservation</a>
