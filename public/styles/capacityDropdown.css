@@ -6,7 +6,7 @@
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-  background-image: url('../pictures/capacityBackground.png');
+  background-image: url('https://s3-us-west-1.amazonaws.com/yum-eats-calendar/capacityBackground.png');
   background-size: 100% 100%;
   border: 1px solid #CCCCCC;
   border-radius: 3px;
